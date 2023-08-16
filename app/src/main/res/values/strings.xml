@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">islmai</string>
+    <string name="title">اسلامي</string>
+    <string name="quran">قران</string>
+    <string name="ahdeth">احاديث</string>
+    <string name="tasbeh">تسبيح</string>
+    <string name="radio">راديو</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
