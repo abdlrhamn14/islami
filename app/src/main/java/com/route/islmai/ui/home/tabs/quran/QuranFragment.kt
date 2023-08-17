@@ -1,5 +1,6 @@
 package com.route.islmai.ui.home.tabs.quran
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.route.islmai.databinding.FragmentQuranBinding
+import com.route.islmai.ui.Constants
+import com.route.islmai.ui.chapterDetalies.ChapterDetalies
 
 
 class QuranFragment : Fragment() {
@@ -147,8 +150,19 @@ class QuranFragment : Fragment() {
       override fun onClick(position: Int, name: String) {
         //send name and position
         //start sura Deatiles activity
+        showChapterDetalies(position, name)
+
       }
     }
+  }
+
+  private fun showChapterDetalies(index: Int, name: String) {
+    //if you send this in intent it will refuse  because you are inside fragment to git
+    // the context which fragment inside you should call get context or activity
+    val intent = Intent(context, ChapterDetalies::class.java)
+    intent.putExtra(Constants.EXTRA_CHAPTER_INDEX, index + 1)//because files starts from 1
+    intent.putExtra(Constants.EXTRA_CHAPTER_NAME, name)
+    startActivity(intent)
   }
 
 
