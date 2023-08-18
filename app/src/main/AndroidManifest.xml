@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Islmai"
         tools:targetApi="31">
         <activity
+            android:name=".ui.hadethDeatalies.HadethAcivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.chapterDetalies.ChapterDetalies"
             android:exported="false" />
         <activity
